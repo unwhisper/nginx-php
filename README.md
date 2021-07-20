@@ -6,7 +6,7 @@ PHP:   **7.4.21**
 # 构建
 ```sh
 git clone https://github.com/unwhisper/nginx-php.git
-cd nginx-php7
+cd nginx-php
 docker build -t nginx-php7 .
 ```
 
@@ -63,4 +63,4 @@ make && make install
 </details>
 
 # License
-本项目遵循 [MIT 开源协议](https://github.com/unwhisper/nginx-php/master/LICENSE).
+本项目遵循 [MIT 开源协议](https://github.com/unwhisper/nginx-php/blob/main/LICENSE).
