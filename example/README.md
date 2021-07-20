@@ -9,12 +9,12 @@ docker run -p 80:80 \
 -v $(pwd)/ssl:/data/server/nginx/ssl \
 -v $(pwd)/ini:/data/server/php/ini \
 -v $(pwd)/extension:/data/server/php/extension \
--d nginx-php7
+-d nginx-php
 ```
 
 ### WEB
-- **HTTP**: http://hostname
-- **HTTPS**: https://hostname
+- **HTTP**: http://ip
+- **HTTPS**: https://ip
 
 If you modify the hosts, you can open the website with the domain.
-- https://test.docker.mmapp.cc
+- https://test.domain.com
