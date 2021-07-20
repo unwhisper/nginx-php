@@ -151,7 +151,7 @@ chmod +x /entrypoint.sh
 # Set port
 EXPOSE 80 443
 
-CMD ["/usr/local/nginx/sbin/nginx", "-g", "daemon off;"]
+# CMD ["/usr/local/nginx/sbin/nginx", "-g", "daemon off;"]
 
 # Start it
 ENTRYPOINT ["/entrypoint.sh"]
