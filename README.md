@@ -10,6 +10,12 @@ cd nginx-php
 docker build -t nginx-php7 .
 ```
 
+# 安装使用
+从 Docker 拉取镜像
+```sh
+docker pull yoonaisu/nginx-php:7.4
+```
+
 # 启动
 使用镜像启动基础容器
 ```sh
