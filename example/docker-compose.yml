@@ -7,8 +7,7 @@ services:
       - "8080:80"
       - "4443:443"
     networks:
-      laravel:
-        - ipv4_address: 172.16.238.10
+      - laravel
     volumes:
       - ./wwwroot:/data/wwwroot
       - ./wwwlogs:/data/wwwlogs
@@ -25,8 +24,7 @@ services:
     ports:
       - "3306:3306"
     networks:
-      laravel:
-        - ipv4_address: 172.16.238.11
+      - laravel
 
 volumes:
   db_data: {}
