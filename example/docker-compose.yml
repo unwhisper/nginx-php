@@ -4,8 +4,8 @@ services:
     image: yoonaisu/nginx-php:7.4
     restart: always
     ports:
-      - "8080:80"
-      - "4443:443"
+      - "80:80"
+      - "443:443"
     networks:
       - laravel
     volumes:
@@ -13,6 +13,8 @@ services:
       - ./wwwlogs:/data/wwwlogs
       - ./ssl:/data/server/nginx/ssl
       - ./vhost:/data/server/nginx/vhost
+      - ./ini:/data/server/php/ini
+      - ./extension:/data/server/php/extension
   # 如果需要mysql
   db:
     image: mysql:5.7
@@ -23,6 +25,13 @@ services:
       MYSQL_ROOT_PASSWORD: root
     ports:
       - "3306:3306"
+    networks:
+      - laravel
+  cache:
+    image: redis
+    restart: always
+    ports:
+      - "6379:6379"
     networks:
       - laravel
 
